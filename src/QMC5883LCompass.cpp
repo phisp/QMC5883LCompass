@@ -72,6 +72,12 @@ void QMC5883LCompass::init(){
 	setMode(0x01,0x0C,0x10,0X00);
 }
 
+void QMC5883LCompass::init(int sda, int scl){
+        Wire.begin(sda, scl);
+        _writeReg(0x0B,0x01);
+        setMode(0x01,0x0C,0x10,0X00);
+}
+
 
 /**
 	SET ADDRESS

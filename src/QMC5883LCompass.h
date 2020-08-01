@@ -10,6 +10,7 @@ class QMC5883LCompass{
   public:
     QMC5883LCompass();
 	void init();
+	void init(int sda, int scl);
     void setADDR(byte b);
     void setMode(byte mode, byte odr, byte rng, byte osr);
 	void setSmoothing(byte steps, bool adv);
